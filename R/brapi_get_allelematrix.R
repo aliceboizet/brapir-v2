@@ -9,20 +9,20 @@
 #' @param dimensionVariantPageSize integer; required: FALSE; The requested page size for the Variant dimension of the matrix
 #' @param dimensionCallSetPage integer; required: FALSE; The requested page number for the CallSet dimension of the matrix
 #' @param dimensionCallSetPageSize integer; required: FALSE; The requested page size for the CallSet dimension of the matrix
-#' @param preview boolean; required: FALSE; Default Value = false  If 'preview' is set to true, then the server should return with the "dataMatrices" field as null or empty. All other data fields should be returned normally.  This is intended to be a preview and give the client a sense of how large the matrix returned will be  If 'preview' is set to false or not set (default), then the server should return all the matrix data as requested.
-#' @param dataMatrixNames string; required: FALSE; "dataMatrixNames" is a comma seperated list of names (ie 'Genotype, Read Depth' etc). This list controls which data matrices are returned in the response.   This maps to a FORMAT field in the VCF file standard.
-#' @param dataMatrixAbbreviations string; required: FALSE; "dataMatrixAbbreviations" is a comma seperated list of abbreviations (ie 'GT, RD' etc). This list controls which data matrices are returned in the response.   This maps to a FORMAT field in the VCF file standard.
-#' @param positionRange string; required: FALSE; The postion range to search   Uses the format "contig:start-end" where "contig" is the chromosome or contig name, "start" is   the starting position of the range, and "end" is the ending position of the range   Example: CRHOM_1:12000-14000
-#' @param germplasmDbId string; required: FALSE; Use this parameter to only return results associated with the given `Germplasm` unique identifier.   Use `GET /germplasm` to find the list of available `Germplasm` on a server.
-#' @param germplasmName string; required: FALSE; Use this parameter to only return results associated with the given `Germplasm` by its human readable name.   Use `GET /germplasm` to find the list of available `Germplasm` on a server.
-#' @param germplasmPUI string; required: FALSE; Use this parameter to only return results associated with the given `Germplasm` by its global permanent unique identifier.   Use `GET /germplasm` to find the list of available `Germplasm` on a server.
-#' @param callSetDbId string; required: FALSE; The ID which uniquely identifies a `CallSet` within the given database server
-#' @param variantDbId string; required: FALSE; The ID which uniquely identifies a `Variant` within the given database server
-#' @param variantSetDbId string; required: FALSE; The ID which uniquely identifies a `VariantSet` within the given database server
-#' @param expandHomozygotes boolean; required: FALSE; Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
-#' @param unknownString string; required: FALSE; The string to use as a representation for missing data
-#' @param sepPhased string; required: FALSE; The string to use as a separator for phased allele calls
-#' @param sepUnphased string; required: FALSE; The string to use as a separator for unphased allele calls
+#' @param preview logical; required: FALSE; Default Value = false  If 'preview' is set to true, then the server should return with the "dataMatrices" field as null or empty. All other data fields should be returned normally.  This is intended to be a preview and give the client a sense of how large the matrix returned will be  If 'preview' is set to false or not set (default), then the server should return all the matrix data as requested.
+#' @param dataMatrixNames character; required: FALSE; "dataMatrixNames" is a comma seperated list of names (ie 'Genotype, Read Depth' etc). This list controls which data matrices are returned in the response.   This maps to a FORMAT field in the VCF file standard.
+#' @param dataMatrixAbbreviations character; required: FALSE; "dataMatrixAbbreviations" is a comma seperated list of abbreviations (ie 'GT, RD' etc). This list controls which data matrices are returned in the response.   This maps to a FORMAT field in the VCF file standard.
+#' @param positionRange character; required: FALSE; The postion range to search   Uses the format "contig:start-end" where "contig" is the chromosome or contig name, "start" is   the starting position of the range, and "end" is the ending position of the range   Example: CRHOM_1:12000-14000
+#' @param germplasmDbId character; required: FALSE; Use this parameter to only return results associated with the given `Germplasm` unique identifier.   Use `GET /germplasm` to find the list of available `Germplasm` on a server.
+#' @param germplasmName character; required: FALSE; Use this parameter to only return results associated with the given `Germplasm` by its human readable name.   Use `GET /germplasm` to find the list of available `Germplasm` on a server.
+#' @param germplasmPUI character; required: FALSE; Use this parameter to only return results associated with the given `Germplasm` by its global permanent unique identifier.   Use `GET /germplasm` to find the list of available `Germplasm` on a server.
+#' @param callSetDbId character; required: FALSE; The ID which uniquely identifies a `CallSet` within the given database server
+#' @param variantDbId character; required: FALSE; The ID which uniquely identifies a `Variant` within the given database server
+#' @param variantSetDbId character; required: FALSE; The ID which uniquely identifies a `VariantSet` within the given database server
+#' @param expandHomozygotes logical; required: FALSE; Should homozygotes be expanded (true) or collapsed into a single occurrence (false)
+#' @param unknownString character; required: FALSE; The string to use as a representation for missing data
+#' @param sepPhased character; required: FALSE; The string to use as a separator for phased allele calls
+#' @param sepUnphased character; required: FALSE; The string to use as a separator for unphased allele calls
 #'
 #' @return
 #' @export
