@@ -1,4 +1,4 @@
-#' Title
+#' @title
 #' get /allelematrix
 #'
 #' @description

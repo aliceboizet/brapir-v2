@@ -2,8 +2,7 @@
 % Please edit documentation in R/brapi_get_allelematrix.R
 \name{brapi_get_allelematrix}
 \alias{brapi_get_allelematrix}
-\title{Title
-get /allelematrix}
+\title{get /allelematrix}
 \usage{
 brapi_get_allelematrix(
   con,
