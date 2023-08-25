@@ -109,7 +109,7 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
     ## Checking used arguments
     for (i in names(usedArgs)) {
       ## Check for arguments which are of type integer
-      if (i %in% c("column", "decimalPlaces", "end", "listSize", "numberOfSamples","page", "pageSize", "plateIndex", "start", "year") || grepl(pattern = "(max)|(Max)|(min)|(Min)|(imageFileSize)|(imageHeight)|(imageWidth)", x = i)) {
+      if (i %in% c("column", "decimalPlaces", "end", "listSize", "numberOfSamples","page", "pageSize", "dimensionCallSetPage", "dimensionCallSetPageSize", "dimensionVariantPage", "dimensionVariantPageSize","plateIndex", "start", "year") || grepl(pattern = "(max)|(Max)|(min)|(Min)|(imageFileSize)|(imageHeight)|(imageWidth)", x = i)) {
         if (!is.numeric(usedArgs[[i]])) {
           stop('Argument: "', i, '" should be of type integer.')
         }
@@ -132,7 +132,7 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
       }
       ## Check for arguments which are of type logical
       if (i %in% c("active", "expandHomozygotes", "includeObservations",
-                   "includeSiblings", "includeSynonyms", "isDerived")) {
+                   "includeSiblings", "includeSynonyms", "isDerived", "preview")) {
         if (!is.logical(usedArgs[[i]])) {
           stop('Argument: "', i, '" should be of type logical e.g. NA, TRUE or FALSE.')
         }
