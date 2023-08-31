@@ -63,6 +63,7 @@ brapi_result2df <- function(cont, usedArgs) {
     contList <- jsonlite::fromJSON(txt = cont)
     ## Use only the result element from the content list (contList)
     resultList <- contList[["result"]]
+    if (contList$metadata$pagination$totalCount>0){
     ## Solve Issue that get_serverinfo has "calls" instead of "data"
     if ("calls" %in% names(resultList)) {
       names(resultList)[which(names(resultList) == "calls")] <- "data"
@@ -437,6 +438,9 @@ brapi_result2df <- function(cont, usedArgs) {
              }
            }
          })
+    } else {
+      dat <- data.frame()
+    }
     if (("metadata" %in% names(contList)) && !is.null(contList[["metadata"]])) {
       if (("pagination" %in% names(contList[["metadata"]])) &&
           !is.null(contList[["metadata"]][["pagination"]])) {
