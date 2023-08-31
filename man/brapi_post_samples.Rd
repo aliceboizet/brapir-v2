@@ -194,6 +194,7 @@ brapi_post_samples(con = con,
 }
 \seealso{
 Other brapi-genotyping: 
+\code{\link{brapi_get_allelematrix}()},
 \code{\link{brapi_get_callsets_callSetDbId_calls}()},
 \code{\link{brapi_get_callsets_callSetDbId}()},
 \code{\link{brapi_get_callsets}()},
@@ -230,6 +231,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_vendor_orders_orderId_status}()},
 \code{\link{brapi_get_vendor_orders}()},
 \code{\link{brapi_get_vendor_specifications}()},
+\code{\link{brapi_post_search_allelematrix}()},
 \code{\link{brapi_post_search_callsets}()},
 \code{\link{brapi_post_search_calls}()},
 \code{\link{brapi_post_search_markerpositions}()},

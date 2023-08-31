@@ -24,8 +24,13 @@
 #' @param sepPhased character; required: FALSE; The string to use as a separator for phased allele calls
 #' @param sepUnphased character; required: FALSE; The string to use as a separator for unphased allele calls
 #'
-#' @return
+#' @return list
+#'
+#' @author J.-F. Rami
+#'
 #' @export
+#' @family brapi-genotyping
+#' @family Allele Matrix
 #'
 #' @examples
 #'

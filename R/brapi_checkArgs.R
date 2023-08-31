@@ -144,7 +144,7 @@ brapi_checkArgs <- function(usedArgs, reqArgs) {
                    "growthFacility", "imageLocation", "lastUpdate",
                    "method", "observationUnitPosition", "ontologyReference",
                    "requiredServiceInfo", "scale", "season",
-                   "trait", "validValues")) {
+                   "trait", "validValues", "pagination")) {
         if (!is.list(usedArgs[[i]])) {
           stop('Argument: "', i, '" should be provided as a list, see the help page on how the list should be constructed.')
         }

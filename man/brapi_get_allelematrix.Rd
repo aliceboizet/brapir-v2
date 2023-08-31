@@ -66,7 +66,7 @@ brapi_get_allelematrix(
 \item{variantSetDbId}{character; required: FALSE; The ID which uniquely identifies a \code{VariantSet} within the given database server}
 }
 \value{
-
+list
 }
 \description{
 Use this endpoint to retrieve a two dimensional matrix of genotype data. The response structure is based on the VCF file format, but the search and filter parameters give the ability to slice and merge data sets. This allows the user to return the subset of data they are interested in, without having to download the entire genotype file.Each row of data (outer array) corresponds to a variant definition, and each column (inner array) corresponds to a callSet.
@@ -74,3 +74,62 @@ Use this endpoint to retrieve a two dimensional matrix of genotype data. The res
 \examples{
 
 }
+\seealso{
+Other brapi-genotyping: 
+\code{\link{brapi_get_callsets_callSetDbId_calls}()},
+\code{\link{brapi_get_callsets_callSetDbId}()},
+\code{\link{brapi_get_callsets}()},
+\code{\link{brapi_get_calls}()},
+\code{\link{brapi_get_maps_mapDbId_linkagegroups}()},
+\code{\link{brapi_get_maps_mapDbId}()},
+\code{\link{brapi_get_maps}()},
+\code{\link{brapi_get_markerpositions}()},
+\code{\link{brapi_get_references_referenceDbId_bases}()},
+\code{\link{brapi_get_references_referenceDbId}()},
+\code{\link{brapi_get_referencesets_referenceSetDbId}()},
+\code{\link{brapi_get_referencesets}()},
+\code{\link{brapi_get_references}()},
+\code{\link{brapi_get_samples_sampleDbId}()},
+\code{\link{brapi_get_samples}()},
+\code{\link{brapi_get_search_calls_searchResultsDbId}()},
+\code{\link{brapi_get_search_callsets_searchResultsDbId}()},
+\code{\link{brapi_get_search_markerpositions_searchResultsDbId}()},
+\code{\link{brapi_get_search_references_searchResultsDbId}()},
+\code{\link{brapi_get_search_referencesets_searchResultsDbId}()},
+\code{\link{brapi_get_search_samples_searchResultsDbId}()},
+\code{\link{brapi_get_search_variants_searchResultsDbId}()},
+\code{\link{brapi_get_search_variantsets_searchResultsDbId}()},
+\code{\link{brapi_get_variants_variantDbId_calls}()},
+\code{\link{brapi_get_variants_variantDbId}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_callsets}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_calls}()},
+\code{\link{brapi_get_variantsets_variantSetDbId_variants}()},
+\code{\link{brapi_get_variantsets_variantSetDbId}()},
+\code{\link{brapi_get_variantsets}()},
+\code{\link{brapi_get_variants}()},
+\code{\link{brapi_get_vendor_orders_orderId_plates}()},
+\code{\link{brapi_get_vendor_orders_orderId_results}()},
+\code{\link{brapi_get_vendor_orders_orderId_status}()},
+\code{\link{brapi_get_vendor_orders}()},
+\code{\link{brapi_get_vendor_specifications}()},
+\code{\link{brapi_post_samples}()},
+\code{\link{brapi_post_search_allelematrix}()},
+\code{\link{brapi_post_search_callsets}()},
+\code{\link{brapi_post_search_calls}()},
+\code{\link{brapi_post_search_markerpositions}()},
+\code{\link{brapi_post_search_referencesets}()},
+\code{\link{brapi_post_search_references}()},
+\code{\link{brapi_post_search_samples}()},
+\code{\link{brapi_post_search_variantsets}()},
+\code{\link{brapi_post_search_variants}()},
+\code{\link{brapi_post_variantsets_extract}()},
+\code{\link{brapi_put_samples_sampleDbId}()}
+
+Other Allele Matrix: 
+\code{\link{brapi_post_search_allelematrix}()}
+}
+\author{
+J.-F. Rami
+}
+\concept{Allele Matrix}
+\concept{brapi-genotyping}
