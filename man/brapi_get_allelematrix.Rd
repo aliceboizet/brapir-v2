@@ -91,6 +91,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_references}()},
 \code{\link{brapi_get_samples_sampleDbId}()},
 \code{\link{brapi_get_samples}()},
+\code{\link{brapi_get_search_allelematrix_searchResultsDbId}()},
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_search_callsets_searchResultsDbId}()},
 \code{\link{brapi_get_search_markerpositions_searchResultsDbId}()},
@@ -126,6 +127,7 @@ Other brapi-genotyping:
 \code{\link{brapi_put_samples_sampleDbId}()}
 
 Other Allele Matrix: 
+\code{\link{brapi_get_search_allelematrix_searchResultsDbId}()},
 \code{\link{brapi_post_search_allelematrix}()}
 }
 \author{

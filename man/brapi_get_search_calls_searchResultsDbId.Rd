@@ -78,6 +78,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_references}()},
 \code{\link{brapi_get_samples_sampleDbId}()},
 \code{\link{brapi_get_samples}()},
+\code{\link{brapi_get_search_allelematrix_searchResultsDbId}()},
 \code{\link{brapi_get_search_callsets_searchResultsDbId}()},
 \code{\link{brapi_get_search_markerpositions_searchResultsDbId}()},
 \code{\link{brapi_get_search_references_searchResultsDbId}()},

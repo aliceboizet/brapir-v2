@@ -38,7 +38,7 @@ brapi_post_search_allelematrix(
 
 \item{germplasmPUIs}{vector of type character; required: FALSE; A list of permanent unique identifiers associated with \code{Germplasm}}
 
-\item{pagination}{vector of type character; required: FALSE; Pagination for the matrix}
+\item{pagination}{a list; required: FALSE; Pagination for the matrix see details}
 
 \item{positionRanges}{vector of type character; required: FALSE; The postion range to search   Uses the format "<chrom>:<start>-<end>" where <chrom> is the chromosome name, <start> is  the starting position of the range, and <end> is the ending position of the range}
 
@@ -72,6 +72,9 @@ Search requests allow a client to send a complex query for data. However, the se
 
 Review the Search Services documentation for additional implementation details.
 }
+\details{
+
+}
 \seealso{
 Other brapi-genotyping: 
 \code{\link{brapi_get_allelematrix}()},
@@ -90,6 +93,7 @@ Other brapi-genotyping:
 \code{\link{brapi_get_references}()},
 \code{\link{brapi_get_samples_sampleDbId}()},
 \code{\link{brapi_get_samples}()},
+\code{\link{brapi_get_search_allelematrix_searchResultsDbId}()},
 \code{\link{brapi_get_search_calls_searchResultsDbId}()},
 \code{\link{brapi_get_search_callsets_searchResultsDbId}()},
 \code{\link{brapi_get_search_markerpositions_searchResultsDbId}()},
@@ -124,7 +128,8 @@ Other brapi-genotyping:
 \code{\link{brapi_put_samples_sampleDbId}()}
 
 Other Allele Matrix: 
-\code{\link{brapi_get_allelematrix}()}
+\code{\link{brapi_get_allelematrix}()},
+\code{\link{brapi_get_search_allelematrix_searchResultsDbId}()}
 }
 \author{
 J.-F. Rami
