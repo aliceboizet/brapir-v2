@@ -118,7 +118,7 @@ brapi_post_lists <- function(con = NULL,
   ## Check validity of used and required arguments
   brapirv2:::brapi_checkArgs(usedArgs, reqArgs = "")
   ## Checks for data and listSize arguments
-  if (usedArgs[["data"]] == "" && usedArgs[["listSize"]] != 0) {
+  if (all(usedArgs[["data"]] == "") && usedArgs[["listSize"]] != 0) {
     usedArgs[["listSize"]] <- 0
   } else if (all(usedArgs[["data"]] != "") && usedArgs[["listSize"]] != length(usedArgs[["data"]])) {
     usedArgs[["listSize"]] <- length(usedArgs[["data"]])
