@@ -81,7 +81,7 @@ brapi_get_search_observationunits_searchResultsDbId <- function(con = NULL,
       ## Convert the content object into a data.frame
       res <- jsonlite::fromJSON(cont)$result$data
       out <- tidyr::unnest(res,cols = c("observations", "observationUnitPosition"), names_sep = ".")
-      if (!all(out$observationUnitPosition.observationLevelRelationships == list())) {
+      if (!all(sapply(out$observationUnitPosition.observationLevelRelationships, function(x) length(x) == 0))) {
         out <- tidyr::unnest(out,cols = "observationUnitPosition.observationLevelRelationships", names_sep = ".")
       }
     }
