@@ -75,15 +75,14 @@ brapi_get_search_observationunits_searchResultsDbId <- function(con = NULL,
         brapirv2:::brapi_message(msg = paste0(status[["message"]], "\n"))
       }
     }
+
     if (httr::status_code(resp) == 200) {
       ## Extract the content from the response object in human readable form
       cont <- httr::content(x = resp, as = "text", encoding = "UTF-8")
       ## Convert the content object into a data.frame
-      res <- jsonlite::fromJSON(cont)$result$data
-      out <- tidyr::unnest(res,cols = c("observations", "observationUnitPosition"), names_sep = ".")
-      if (!all(sapply(out$observationUnitPosition.observationLevelRelationships, function(x) length(x) == 0))) {
-        out <- tidyr::unnest(out,cols = "observationUnitPosition.observationLevelRelationships", names_sep = ".")
-      }
+      out <- jsonlite::fromJSON(cont, flatten = T)$result$data
+      out <- tidyr::unnest(out,cols = "observationUnitPosition.observationLevelRelationships", names_sep = ".", keep_empty = T)
+      out <- tidyr::unnest(out,cols = "observations", names_sep = ".", keep_empty = T)
     }
   })
   ## Set class of output
